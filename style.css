@@ -5,12 +5,24 @@
 }
 
 body {
-  background-image: linear-gradient(160deg, #9dc0a9 50%, #b7dde4 50%);
+  background-image: linear-gradient(
+    160deg,
+    rgb(255, 187, 99) 50%,
+    rgb(101, 140, 220) 50%
+  );
   min-height: 100vh;
   font-family: "Outfit", sans-serif;
   text-align: center;
   text-shadow: 1px 1px 1px white;
   color: #333;
+}
+
+h1 {
+  user-select: none;
+}
+
+p {
+  user-select: none;
 }
 
 #gameBoard {
@@ -38,28 +50,89 @@ body {
   pointer-events: none;
   background-color: white;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .gameBtn.active {
-  background-color: rgb(186, 156, 222);
+  background-color: rgb(250, 29, 73);
+}
+
+.alarm {
+  display: block;
+  object-fit: cover;
+  margin-top: 23px;
+  width: 150px;
+  height: 150px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.alarmRing {
+  display: none;
+  object-fit: cover;
+  width: 175px;
+  height: 175px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
 }
 
 #startBtn,
 #quitBtn {
   border-style: none;
-  font-family: "Outfit", sans-serif;
+  font-family: inherit;
   padding: 2rem;
   margin: 1rem;
-  background-color: #9dc0a9;
+  background-color: rgb(255, 187, 99);
   text-shadow: 1px 1px 1px white;
 }
 
-#startBtn:hover,
-#quitBtn:hover {
-  background-color: #b0cbba;
+#closeBtn {
+  border-style: none;
+  font-family: inherit;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: rgb(255, 187, 99);
+  text-shadow: 1px 1px 1px white;
 }
 
-img {
-  width: 150px;
-  height: 150px;
+#quitBtn {
+  display: none;
+}
+
+#quitBtn.visible {
+  display: block;
+}
+
+#startBtn:hover,
+#quitBtn:hover,
+#closeBtn:hover {
+  background-color: rgb(255, 209, 148);
+}
+
+.scoreOverlay {
+  background-color: rgba(236, 236, 236, 0.881);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.scoreOverlay.visible {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
 }

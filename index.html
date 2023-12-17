@@ -4,23 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./graphics/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
-    <title>Speed Game</title>
+    <title>Hit the Snooze!</title>
   </head>
   <body>
     <div id="gameBoard">
-      <h1>Speed Game</h1>
+      <h1>Hit the Snooze!</h1>
       <p>Your Score: <span class="score">0</span></p>
+      <div class="scoreOverlay">
+        <div id="scoreModal"></div>
+        <button id="closeBtn">Try Again</button>
+      </div>
       <div id="gameButtons">
-        <div id="btn1" class="gameBtn"></div>
-        <div id="btn2" class="gameBtn"></div>
-        <div id="btn3" class="gameBtn"></div>
-        <div id="btn4" class="gameBtn"></div>
+        <div id="btn1" class="gameBtn">
+          <img
+            src="./graphics/silent.png"
+            class="alarm"
+            alt="alarm"
+            draggable="false"
+          />
+          <img
+            src="./graphics/ringing.png"
+            class="alarmRing"
+            alt="alarmRing"
+            draggable="false"
+          />
+        </div>
+        <div id="btn2" class="gameBtn">
+          <img
+            src="./graphics/silent.png"
+            class="alarm"
+            alt="alarm"
+            draggable="false"
+          />
+          <img
+            src="./graphics/ringing.png"
+            class="alarmRing"
+            alt="alarmRing"
+            draggable="false"
+          />
+        </div>
+        <div id="btn3" class="gameBtn">
+          <img
+            src="./graphics/silent.png"
+            class="alarm"
+            alt="alarm"
+            draggable="false"
+          />
+          <img
+            src="./graphics/ringing.png"
+            class="alarmRing"
+            alt="alarmRing"
+            draggable="false"
+          />
+        </div>
+        <div id="btn4" class="gameBtn">
+          <img
+            src="./graphics/silent.png"
+            class="alarm"
+            alt="alarm"
+            draggable="false"
+          />
+          <img
+            src="./graphics/ringing.png"
+            class="alarmRing"
+            alt="alarmRing"
+            draggable="false"
+          />
+        </div>
       </div>
       <div id="startAndQuit">
         <button id="startBtn">Start</button>
