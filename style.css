@@ -57,6 +57,14 @@ p {
   background-color: rgb(250, 29, 73);
 }
 
+.gameBtn.active .alarmRing {
+  display: block !important;
+}
+
+.gameBtn.active .alarm {
+  display: none !important;
+}
+
 .alarm {
   display: block;
   object-fit: cover;
